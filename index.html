@@ -25,5 +25,40 @@
   <body class="bg-[#16130F] text-[#E9E1DA] antialiased selection:bg-[#C9A96E]/30 selection:text-[#E9E1DA]">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        var root = document.getElementById('root');
+        var devEntry = document.querySelector('script[src="/src/main.tsx"]');
+        if (!root || !devEntry) return;
+
+        function tryRedirectToDocs() {
+          if (root.hasChildNodes()) return;
+          if (window.location.pathname.indexOf('/docs/') !== -1) return;
+          var p = window.location.pathname;
+          var base = p.endsWith('/index.html')
+            ? p.slice(0, -10)
+            : p.endsWith('/')
+              ? p
+              : p + '/';
+          var docsUrl = base + 'docs/';
+          fetch(docsUrl + 'index.html', { method: 'HEAD' })
+            .then(function (res) {
+              if (res.ok && !root.hasChildNodes()) {
+                window.location.replace(
+                  docsUrl + window.location.search + window.location.hash
+                );
+              }
+            })
+            .catch(function () {});
+        }
+
+        devEntry.addEventListener('error', tryRedirectToDocs);
+        window.setTimeout(function () {
+          if (!root.hasChildNodes() && window.location.hostname.endsWith('github.io')) {
+            tryRedirectToDocs();
+          }
+        }, 900);
+      })();
+    </script>
   </body>
 </html>
