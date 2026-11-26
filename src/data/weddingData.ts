@@ -1,5 +1,9 @@
 import midnightStarryBg from '../assets/images/midnight_starry_background_1795676673736.jpg';
 import khitanCoverBoy from '../assets/images/khitan_cover_boy_1795680275667.jpg';
+import khitanCoverBgOnly from '../assets/images/khitan_cover_bg_only_1795682812798.jpg';
+import khitanBoyHead from '../assets/images/khitan_boy_head.png';
+import khitanBoyTorso from '../assets/images/khitan_boy_torso.png';
+import khitanBoyLegs from '../assets/images/khitan_boy_legs.png';
 import khitanChildPortrait from '../assets/images/khitan_child_portrait_1795680276388.jpg';
 import khitanFamilyTop from '../assets/images/khitan_family_top_1795680276691.jpg';
 import khitanDoaWide from '../assets/images/khitan_doa_wide_1795680277055.jpg';
@@ -39,6 +43,10 @@ export interface GalleryPhoto {
 export const WEDDING_IMAGES = {
   coverBackdrop: midnightStarryBg,
   coverBoy: khitanCoverBoy,
+  coverBgOnly: khitanCoverBgOnly,
+  coverBoyHead: khitanBoyHead,
+  coverBoyTorso: khitanBoyTorso,
+  coverBoyLegs: khitanBoyLegs,
   heroBackdrop: midnightStarryBg,
   withLoveTop: khitanFamilyTop,
   withLoveBottom: khitanDoaWide,
