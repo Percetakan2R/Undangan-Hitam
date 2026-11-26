@@ -175,7 +175,7 @@ function VenueMapContent() {
         <AdvancedMarker
           ref={markerRef}
           position={resolvedPlace.position}
-          title={`${resolvedPlace.displayName} — Lokasi Pernikahan Rafi & Alesha`}
+          title={`${resolvedPlace.displayName} — Lokasi Walimatul Khitan Ananda Rafi`}
           clickable={true}
           onClick={() => setInfoWindowOpen((prev) => !prev)}
         >

@@ -32,7 +32,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
         <main className="min-h-screen w-full flex flex-col items-center justify-center px-6 py-12 bg-[#100E0A] text-[#E9E1DA] text-center">
           <div className="max-w-md rounded-2xl border border-[#C9A96E]/50 bg-[#1E1B17] p-6 shadow-xl flex flex-col items-center gap-3">
             <h1 className="font-display text-2xl text-[#E6C487]">
-              Undangan Rafi &amp; Alesha
+              Walimatul Khitan — Ananda Rafi
             </h1>
             <p className="font-body text-xs text-[#D0C5B5] leading-relaxed">
               Maaf, terjadi kendala saat menampilkan halaman ({this.state.message}).

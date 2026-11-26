@@ -41,7 +41,7 @@ export function CoverScreen({ guestName, onOpen }: CoverScreenProps) {
 
       {/* Centered Editorial Frame */}
       <div className="relative z-10 w-full max-w-md mx-auto flex-1 flex flex-col items-center justify-between py-4">
-        {/* Top Oval Couple Portrait */}
+        {/* Top Oval Child Portrait */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, y: 12 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -50,16 +50,16 @@ export function CoverScreen({ guestName, onOpen }: CoverScreenProps) {
         >
           <div className="w-48 sm:w-52 aspect-[3/4] rounded-full overflow-hidden border border-[#E9E1DA]/50 bg-[#100E0A] shadow-2xl">
             <SmartImage
-              src={WEDDING_IMAGES.coverCouple}
-              alt="Ilustrasi kartun mempelai Rafi dan Alesha dalam busana pengantin hitam"
+              src={WEDDING_IMAGES.coverBoy}
+              alt="Ilustrasi kartun Ananda Muhammad Rafi Pratama dalam busana koko hitam emas dan peci"
               loading="eager"
-              fallbackLabel="Rafi & Alesha"
+              fallbackLabel="Ananda Rafi"
               className="w-full h-full object-cover object-top"
             />
           </div>
         </motion.div>
 
-        {/* Couple Title & Guest Greeting */}
+        {/* Event Title & Guest Greeting */}
         <section className="w-full flex flex-col items-center text-center gap-6 my-6">
           <div className="flex flex-col items-center gap-1.5">
             <motion.p
@@ -68,15 +68,15 @@ export function CoverScreen({ guestName, onOpen }: CoverScreenProps) {
               transition={{ duration: 0.5, delay: 0.12 }}
               className="font-body text-sm text-[#D0C5B5] tracking-wider"
             >
-              The Wedding of
+              Walimatul Khitan
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 14, letterSpacing: '0.12em' }}
               animate={{ opacity: 1, y: 0, letterSpacing: '0.06em' }}
               transition={{ duration: 0.7, delay: 0.22, ease: [0.2, 0, 0, 1] }}
-              className="font-display text-4xl sm:text-[42px] leading-tight uppercase text-gold-shimmer text-balance"
+              className="font-display text-3xl sm:text-[40px] leading-tight uppercase text-gold-shimmer text-balance"
             >
-              {COUPLE_INFO.groomShort} &amp; {COUPLE_INFO.brideShort}
+              Ananda {COUPLE_INFO.childShort}
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 10 }}

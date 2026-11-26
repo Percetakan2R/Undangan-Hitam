@@ -46,7 +46,7 @@ interface MainInvitationProps {
   onBackToCover: () => void;
 }
 
-const STORAGE_KEY = 'rafi_alesha_wishes_v1';
+const STORAGE_KEY = 'khitan_rafi_wishes_v1';
 
 interface CountdownTime {
   days: string;
@@ -272,7 +272,7 @@ export function MainInvitation({
           href="#hero-arch"
           className="font-display text-lg tracking-wider text-[#E6C487] whitespace-nowrap shrink-0"
         >
-          {COUPLE_INFO.groomShort} &amp; {COUPLE_INFO.brideShort}
+          Khitanan {COUPLE_INFO.childShort}
         </a>
 
         <nav
@@ -286,10 +286,10 @@ export function MainInvitation({
             Doa
           </a>
           <a
-            href="#mempelai"
+            href="#profil"
             className="hover:text-[#E6C487] transition-colors whitespace-nowrap shrink-0"
           >
-            Mempelai
+            Profil
           </a>
           <a
             href="#rangkaian-acara"
@@ -387,37 +387,28 @@ export function MainInvitation({
             transition={{ duration: 0.5, delay: 0.05 }}
             className="font-body text-sm text-[#E9E1DA] tracking-wider"
           >
-            The Wedding of
+            Walimatul Khitan
           </motion.p>
 
           <div className="flex flex-col items-center gap-1">
+            <motion.span
+              initial={{ opacity: 0, y: 14 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.12 }}
+              className="font-headline text-xl sm:text-2xl text-[#C9A96E] tracking-wider"
+            >
+              Ananda
+            </motion.span>
             <motion.h1
               initial={{ opacity: 0, y: 18, letterSpacing: '0.14em' }}
               whileInView={{ opacity: 1, y: 0, letterSpacing: '0.08em' }}
               viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.65, delay: 0.12, ease: [0.2, 0, 0, 1] }}
-              className="font-display text-4xl sm:text-[44px] leading-tight uppercase text-gold-shimmer text-balance"
+              transition={{ duration: 0.65, delay: 0.2, ease: [0.2, 0, 0, 1] }}
+              className="font-display text-3xl sm:text-[42px] leading-tight uppercase text-gold-shimmer text-balance"
             >
-              {COUPLE_INFO.groomShort}
+              {COUPLE_INFO.childFull}
             </motion.h1>
-            <motion.span
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.45, delay: 0.2 }}
-              className="font-headline text-2xl text-[#C9A96E]"
-            >
-              &amp;
-            </motion.span>
-            <motion.span
-              initial={{ opacity: 0, y: 18, letterSpacing: '0.14em' }}
-              whileInView={{ opacity: 1, y: 0, letterSpacing: '0.08em' }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.65, delay: 0.26, ease: [0.2, 0, 0, 1] }}
-              className="font-display text-4xl sm:text-[44px] leading-tight uppercase text-gold-shimmer"
-            >
-              {COUPLE_INFO.brideShort}
-            </motion.span>
           </div>
 
           <motion.div
@@ -437,7 +428,7 @@ export function MainInvitation({
 
           <motion.a
             href="#with-love"
-            aria-label="Gulir ke bagian doa pernikahan"
+            aria-label="Gulir ke bagian doa khitanan"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: [0, 5, 0] }}
             transition={{
@@ -495,8 +486,8 @@ export function MainInvitation({
           >
             <SmartImage
               src={WEDDING_IMAGES.withLoveTop}
-              alt="Ilustrasi kartun Rafi dan Alesha berpegangan tangan di bawah lentera malam berbintang"
-              fallbackLabel="With Love"
+              alt="Ilustrasi kartun keluarga bahagia Ananda Rafi bersama ayah dan ibu di taman malam berbintang"
+              fallbackLabel="Doa & Harapan"
               className="w-full h-full object-cover"
             />
           </motion.div>
@@ -508,7 +499,7 @@ export function MainInvitation({
             transition={{ duration: 0.55 }}
             className="relative z-10 font-headline text-[28px] sm:text-[32px] uppercase tracking-[0.06em] text-gold-shimmer text-balance"
           >
-            With Love
+            Doa &amp; Harapan
           </motion.h2>
 
           <motion.blockquote
@@ -518,11 +509,10 @@ export function MainInvitation({
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative z-10 font-body text-sm sm:text-base leading-relaxed text-[#E9E1DA]/90 text-pretty max-w-xl italic"
           >
-            “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
-            pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
-            dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
-            kasih dan sayang. Sungguh, pada yang demikian itu benar-benar
-            terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”
+            “Ya Tuhanku, jadikanlah aku dan anak cucuku orang-orang yang tetap
+            mendirikan shalat, ya Tuhan kami, perkenankanlah doaku. Semoga Ananda
+            Muhammad Rafi Pratama tumbuh menjadi anak yang sholeh, sehat, cerdas,
+            serta berbakti kepada kedua orang tua, agama, dan bangsa.”
           </motion.blockquote>
 
           <motion.p
@@ -532,7 +522,7 @@ export function MainInvitation({
             transition={{ duration: 0.5, delay: 0.15 }}
             className="relative z-10 font-title text-sm font-semibold tracking-wider text-[#E6C487]"
           >
-            — QS. Ar-Rum : 21 —
+            — QS. Ibrahim : 40 —
           </motion.p>
 
           <motion.div
@@ -544,16 +534,16 @@ export function MainInvitation({
           >
             <SmartImage
               src={WEDDING_IMAGES.withLoveBottom}
-              alt="Ilustrasi kartun Rafi dan Alesha di teras batu di bawah sinar bulan sabit"
-              fallbackLabel="Rafi & Alesha"
+              alt="Ilustrasi kartun Ananda Rafi di teras taman malam di bawah sinar bulan sabit dan lentera emas"
+              fallbackLabel="Ananda Rafi"
               className="w-full h-full object-cover"
             />
           </motion.div>
         </section>
 
-        {/* Section 3: Mempelai (Profil Pengantin) */}
+        {/* Section 3: Profil Yang Dikhitan */}
         <section
-          id="mempelai"
+          id="profil"
           className="relative w-full px-6 py-16 flex flex-col items-center text-center gap-10 border-t border-[#C9A96E]/25 overflow-hidden"
         >
           <AnimatedTreeCanopy position="bottom" />
@@ -565,77 +555,38 @@ export function MainInvitation({
             className="relative z-10 flex flex-col items-center gap-2 max-w-lg"
           >
             <h2 className="font-headline text-[28px] sm:text-[32px] uppercase tracking-[0.06em] text-gold-shimmer text-balance">
-              Mempelai
+              Yang Berbahagia
             </h2>
             <p className="font-body text-xs sm:text-sm text-[#D0C5B5] text-pretty">
               Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud
-              menyelenggarakan pernikahan putra-putri kami:
+              menyelenggarakan Walimatul Khitan putra tercinta kami:
             </p>
           </motion.div>
 
-          <div className="relative z-10 w-full grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-8 md:gap-6">
-            {/* Mempelai Pria */}
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.6 }}
-              className="w-full flex flex-col items-center gap-4"
-            >
-              <div className="w-40 sm:w-44 aspect-[3/4] rounded-full overflow-hidden border border-[#C9A96E]/70 bg-[#1E1B17] shadow-xl">
-                <SmartImage
-                  src={WEDDING_IMAGES.groom}
-                  alt="Foto kartun mempelai pria Rafi Pratama"
-                  fallbackLabel="Rafi Pratama"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <h3 className="font-headline text-xl sm:text-[22px] text-[#E6C487] text-balance">
-                  {COUPLE_INFO.groomFull}
-                </h3>
-                <p className="font-body text-xs sm:text-sm text-[#D0C5B5] text-balance max-w-xs">
-                  {COUPLE_INFO.groomParents}
-                </p>
-              </div>
-            </motion.div>
-
-            <motion.span
-              initial={{ opacity: 0, scale: 0.85 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="font-headline text-3xl sm:text-4xl text-[#C9A96E]"
-            >
-              &amp;
-            </motion.span>
-
-            {/* Mempelai Wanita */}
-            <motion.div
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.6, delay: 0.12 }}
-              className="w-full flex flex-col items-center gap-4"
-            >
-              <div className="w-40 sm:w-44 aspect-[3/4] rounded-full overflow-hidden border border-[#C9A96E]/70 bg-[#1E1B17] shadow-xl">
-                <SmartImage
-                  src={WEDDING_IMAGES.bride}
-                  alt="Foto kartun mempelai wanita Alesha Zahra"
-                  fallbackLabel="Alesha Zahra"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="flex flex-col items-center gap-1">
-                <h3 className="font-headline text-xl sm:text-[22px] text-[#E6C487] text-balance">
-                  {COUPLE_INFO.brideFull}
-                </h3>
-                <p className="font-body text-xs sm:text-sm text-[#D0C5B5] text-balance max-w-xs">
-                  {COUPLE_INFO.brideParents}
-                </p>
-              </div>
-            </motion.div>
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.15 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 w-full max-w-sm flex flex-col items-center gap-5"
+          >
+            <div className="w-44 sm:w-48 aspect-[3/4] rounded-full overflow-hidden border border-[#C9A96E]/70 bg-[#1E1B17] shadow-2xl">
+              <SmartImage
+                src={WEDDING_IMAGES.childPortrait}
+                alt="Foto kartun Ananda Muhammad Rafi Pratama"
+                fallbackLabel="Muhammad Rafi Pratama"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div className="flex flex-col items-center gap-1.5">
+              <h3 className="font-headline text-2xl sm:text-[26px] text-[#E6C487] text-balance">
+                Ananda {COUPLE_INFO.childFull}
+              </h3>
+              <p className="font-body text-xs sm:text-sm text-[#D0C5B5] text-balance max-w-xs">
+                {COUPLE_INFO.parentsFull}
+              </p>
+            </div>
+          </motion.div>
         </section>
 
         {/* Section 4: Save The Date */}
@@ -677,7 +628,8 @@ export function MainInvitation({
 
             <p className="font-body text-xs sm:text-sm text-[#D0C5B5] text-pretty max-w-md">
               Dengan memohon rahmat dan ridho Allah SWT, kami mengundang
-              Bapak/Ibu/Saudara/i, untuk menghadiri acara pernikahan kami:
+              Bapak/Ibu/Saudara/i untuk menghadiri acara Walimatul Khitan putra
+              kami:
             </p>
 
             <a
@@ -1179,7 +1131,7 @@ export function MainInvitation({
             Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
           </p>
           <p className="font-headline text-2xl text-gold-shimmer">
-            {COUPLE_INFO.groomShort} &amp; {COUPLE_INFO.brideShort}
+            Ananda {COUPLE_INFO.childFull}
           </p>
           <button
             type="button"
@@ -1234,7 +1186,7 @@ export function MainInvitation({
                 {guestName}
               </p>
 
-              <QrCodeSvg value={`RAFI-ALESHA-${guestName}`} size={160} />
+              <QrCodeSvg value={`KHITAN-RAFI-${guestName}`} size={160} />
 
               <p className="font-body text-xs text-[#D0C5B5]">
                 Tunjukkan kode ini di meja penerima tamu pada hari acara.
