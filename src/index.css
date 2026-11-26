@@ -1,0 +1,133 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-gold-accent: #C9A96E;
+  --color-hadir-bg: #D1FAE5;
+  --color-hadir-text: #14532D;
+  --color-absen-bg: #FEE2E2;
+  --color-absen-text: #7F1D1D;
+  --color-ragu-bg: #FEF3C7;
+  --color-ragu-text: #78350F;
+
+  --color-dark-primary: #E6C487;
+  --color-dark-on-primary: #412D00;
+  --color-dark-surface: #16130F;
+  --color-dark-surface-bright: #3C3934;
+  --color-dark-surface-container-lowest: #100E0A;
+  --color-dark-surface-container-low: #1E1B17;
+  --color-dark-surface-container: #221F1B;
+  --color-dark-surface-container-high: #2D2925;
+  --color-dark-on-surface: #E9E1DA;
+  --color-dark-on-surface-variant: #D0C5B5;
+  --color-dark-outline: #998F81;
+  --color-dark-outline-variant: #4D463A;
+
+  --font-display: "Bodoni Moda", Georgia, serif;
+  --font-headline: "Bodoni Moda", Georgia, serif;
+  --font-title: "Raleway", system-ui, sans-serif;
+  --font-body: "Raleway", system-ui, sans-serif;
+  --font-label: "Raleway", system-ui, sans-serif;
+  --font-mono: "Source Code Pro", monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-body);
+    background-color: var(--color-dark-surface-container-lowest);
+    color: var(--color-dark-on-surface);
+  }
+}
+
+@keyframes swayBreeze {
+  0%, 100% {
+    transform: rotate(-1.2deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(3.4deg) translate3d(5px, 3px, 0);
+  }
+}
+
+@keyframes swayBreezeReverse {
+  0%, 100% {
+    transform: rotate(1.2deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-3.4deg) translate3d(-5px, 3px, 0);
+  }
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes goldTextShimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-sway-left {
+  animation: swayBreeze 7.5s ease-in-out infinite;
+  transform-origin: top left;
+}
+
+.animate-sway-right {
+  animation: swayBreezeReverse 8.5s ease-in-out infinite;
+  transform-origin: top right;
+}
+
+.animate-sway-bottom-left {
+  animation: swayBreezeReverse 9s ease-in-out infinite;
+  transform-origin: bottom left;
+}
+
+.animate-sway-bottom-right {
+  animation: swayBreeze 8s ease-in-out infinite;
+  transform-origin: bottom right;
+}
+
+.animate-star-twinkle {
+  animation: starTwinkle var(--twinkle-duration, 4s) ease-in-out infinite;
+  animation-delay: var(--twinkle-delay, 0s);
+}
+
+.text-gold-shimmer {
+  background-image: linear-gradient(
+    110deg,
+    #C9A96E 0%,
+    #F5DFB0 35%,
+    #E6C487 55%,
+    #B89252 80%,
+    #E6C487 100%
+  );
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldTextShimmer 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-sway-left,
+  .animate-sway-right,
+  .animate-sway-bottom-left,
+  .animate-sway-bottom-right,
+  .animate-star-twinkle,
+  .text-gold-shimmer {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sampul Undangan — Rafi &amp; Alesha</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'gold-accent': '#C9A96E',
+        'hadir-bg': '#D1FAE5',
+        'hadir-text': '#14532D',
+        'absen-bg': '#FEE2E2',
+        'absen-text': '#7F1D1D',
+        'light-primary': '#745A27',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#C9A96E',
+        'light-on-primary-container': '#543D0C',
+        'light-secondary': '#6A5D44',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#F3E0C1',
+        'light-on-secondary-container': '#71624A',
+        'light-tertiary': '#4E5E82',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#9DADD5',
+        'light-on-tertiary-container': '#314163',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-surface': '#FFF8F3',
+        'light-surface-dim': '#E0D9D2',
+        'light-surface-bright': '#FFF8F3',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#FAF2EB',
+        'light-surface-container': '#F4EDE5',
+        'light-surface-container-high': '#EEE7E0',
+        'light-surface-container-highest': '#E9E1DA',
+        'light-on-surface': '#1E1B17',
+        'light-on-surface-variant': '#4D463A',
+        'light-outline': '#7F7668',
+        'light-outline-variant': '#D0C5B5',
+        'dark-primary': '#E6C487',
+        'dark-on-primary': '#412D00',
+        'dark-primary-container': '#C9A96E',
+        'dark-on-primary-container': '#543D0C',
+        'dark-secondary': '#D7C4A7',
+        'dark-on-secondary': '#3A2F1A',
+        'dark-secondary-container': '#544731',
+        'dark-on-secondary-container': '#C8B699',
+        'dark-tertiary': '#B8C8F2',
+        'dark-on-tertiary': '#203051',
+        'dark-tertiary-container': '#9DADD5',
+        'dark-on-tertiary-container': '#314163',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-surface': '#16130F',
+        'dark-surface-dim': '#16130F',
+        'dark-surface-bright': '#3C3934',
+        'dark-surface-container-lowest': '#100E0A',
+        'dark-surface-container-low': '#1E1B17',
+        'dark-surface-container': '#221F1B',
+        'dark-surface-container-high': '#2D2925',
+        'dark-surface-container-highest': '#38342F',
+        'dark-on-surface': '#E9E1DA',
+        'dark-on-surface-variant': '#D0C5B5',
+        'dark-outline': '#998F81',
+        'dark-outline-variant': '#4D463A',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '12px',
+        'md': '16px',
+        'lg': '24px',
+        'xl': '32px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Bodoni Moda"', 'sans-serif'],
+        'headline': ['"Bodoni Moda"', 'sans-serif'],
+        'title': ['"Raleway"', 'sans-serif'],
+        'body': ['"Raleway"', 'sans-serif'],
+        'label': ['"Raleway"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['44px', { lineHeight: '50px', letterSpacing: '1.5px', fontWeight: '600' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '1.2px', fontWeight: '600' }],
+        'headline-lg': ['34px', { lineHeight: '40px', letterSpacing: '1px', fontWeight: '500' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '0.8px', fontWeight: '500' }],
+        'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '0.5px', fontWeight: '500' }],
+        'title-md': ['18px', { lineHeight: '24px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'title-sm': ['15px', { lineHeight: '20px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'body-md': ['14px', { lineHeight: '22px', letterSpacing: '0.1px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '400' }],
+        'label-lg': ['13px', { lineHeight: '18px', letterSpacing: '0.8px', fontWeight: '600' }],
+        'label-sm': ['11px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '600' }],
+        'mono-md': ['14px', { lineHeight: '20px', letterSpacing: '1px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '300ms',
+        'surface-exit': '200ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&amp;family=Raleway:wght@400;500;600;700&amp;family=Source+Code+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-light-surface dark:bg-dark-surface text-light-on-surface dark:text-dark-on-surface antialiased">
+  <main class="relative min-h-[884px] w-full max-w-md mx-auto overflow-hidden flex flex-col items-center justify-between px-page-margin py-gutter-xl bg-light-surface-container-lowest dark:bg-dark-surface-container-lowest" data-stitch-vh="min-h-[884px]===min-h-screen">
+    <!-- Atmospheric Midnight Ruins Backdrop -->
+    <img src="https://lh3.googleusercontent.com/aida/ALJJyrCqdPS0uztHsfQK8GQPg7B0Me5nGGMuexPPEcaa7XP7aSVWoWp3jGASmHUJ7xZBTj31pTcvA-cpXPndqw6CO4ZyhrdRRHAxxd0hmtkpc5SSvSkuVciU9vXPUvY5jLVRW-2wunGPrPkqY8M7bC624l7AxfTMWUhrTYIOVyroHA1j3cqkKNCZ9LuuESplOKc9lDdsbwR6pIbCE_e1AWGBmxtOAOQ4JfmnaGS6BX60S8rM4kWn1XJcfVxMA_Snxg" alt="Langit malam berbintang dan reruntuhan kuil klasik di bawah sinar bulan" class="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none opacity-85">
+    <div class="absolute inset-0 bg-gradient-to-b from-dark-surface-container-lowest/65 via-dark-surface-container-lowest/40 to-dark-surface-container-lowest/85 pointer-events-none"></div>
+
+    <!-- Top Spacer for Moon Framing -->
+    <div class="relative z-10 w-full pt-gutter-xl flex flex-col items-center">
+      <!-- Oval Couple Portrait -->
+      <div class="w-48 aspect-[3/4] rounded-full overflow-hidden border border-dark-on-surface/50 bg-dark-surface-container-lowest shadow-lg">
+        <img src="https://lh3.googleusercontent.com/aida/ALJJyrCe2wiV3hakpywm51Vkmwi3GSorZHMDBAEyTdw-9M1KHEzDB_rlW241gCyv38opKVt_JNCoGzxT_o4ChtEl98g34nMCyvnviyWPie5wZXVeV2Z9yO6Pps5_icFAJUXO1ipIDR9sUspvaSzVdws4428VuXJJFRl-XA0Ps4fE9Wl-KF9kg-5RyCImk0WLKUmCXkJjoDGY8j1hf0OgkHJMjYrdV9Hrj4dJ8SYQaU6XomFMdAEO9XqVPlTA" alt="Ilustrasi mempelai Rafi dan Alesha dalam busana pengantin hitam" class="w-full h-full object-cover object-top">
+      </div>
+    </div>
+
+    <!-- Couple Title & Guest Greeting -->
+    <section class="relative z-10 w-full flex flex-col items-center text-center gap-gutter-lg my-gutter-lg">
+      <div class="flex flex-col items-center gap-gutter-xs">
+        <p data-design-text-token="body-md" class="font-body text-body-md text-dark-on-surface-variant tracking-wide">
+          The Wedding of
+        </p>
+        <!-- COMPONENT: typography-display -->
+        <h1 data-component-id="typography-display" data-component-type="typography" data-component-variant="display" data-design-text-token="display-lg-mobile" class="font-display text-display-lg-mobile uppercase text-dark-on-surface text-balance">Rafi &amp; Alesha</h1>
+      </div>
+
+      <div class="flex flex-col items-center gap-gutter-xs">
+        <p data-design-text-token="body-sm" class="font-body text-body-sm text-dark-on-surface-variant">
+          Kepada Yth. Bapak/Ibu/Saudara/i
+        </p>
+        <p id="guest-name" data-design-text-token="title-md" class="font-title text-title-md text-dark-on-surface">
+          Nama Tamu
+        </p>
+      </div>
+
+      <!-- COMPONENT: button-with-icon -->
+      <a href="../undangan-utama/UndanganUtama.html" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-gutter-sm rounded-full border border-gold-accent bg-dark-surface-container-lowest/85 text-dark-on-surface px-gutter-lg py-gutter-sm font-label text-label-lg uppercase transition-transform duration-state-change ease-state-change hover:bg-dark-surface-container active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold-accent">
+        <span class="material-symbols-outlined text-title-md" aria-hidden="true">mail</span>
+        <span data-design-text-token="label-lg">Buka Undangan</span>
+      </a>
+    </section>
+
+    <!-- Bottom Ruins Breathing Room -->
+    <div class="relative z-10 h-16 w-full pointer-events-none"></div>
+  </main>
+
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var guest = params.get('to');
+        if (guest && guest.trim()) {
+          document.getElementById('guest-name').textContent = guest.trim();
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+
+</body></html>

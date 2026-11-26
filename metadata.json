@@ -1,0 +1,6 @@
+{
+  "name": "Rafi & Alesha — Undangan Pernikahan Digital",
+  "description": "Undangan pernikahan digital interaktif Rafi Pratama & Alesha Zahra, Sabtu 12 Desember 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
