@@ -509,21 +509,11 @@ export function MainInvitation({
             transition={{ duration: 0.6, delay: 0.1 }}
             className="relative z-10 font-body text-sm sm:text-base leading-relaxed text-[#E9E1DA]/90 text-pretty max-w-xl italic"
           >
-            “Ya Tuhanku, jadikanlah aku dan anak cucuku orang-orang yang tetap
-            mendirikan shalat, ya Tuhan kami, perkenankanlah doaku. Semoga Ananda
-            Muhammad Rafi Pratama tumbuh menjadi anak yang sholeh, sehat, cerdas,
-            serta berbakti kepada kedua orang tua, agama, dan bangsa.”
+            “Ya Allah, berkahilah langkah Ananda Muhammad Rafi Pratama menuju
+            kedewasaan. Semoga ia tumbuh menjadi anak yang sholeh, sehat,
+            cerdas, taat beribadah, serta berbakti kepada kedua orang tua,
+            agama, dan bangsa.”
           </motion.blockquote>
-
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.15 }}
-            transition={{ duration: 0.5, delay: 0.15 }}
-            className="relative z-10 font-title text-sm font-semibold tracking-wider text-[#E6C487]"
-          >
-            — QS. Ibrahim : 40 —
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -754,7 +744,7 @@ export function MainInvitation({
               Galeri Momen
             </h2>
             <p className="font-body text-xs sm:text-sm text-[#D0C5B5]">
-              Kisah Rafi &amp; Alesha dalam Bingkai Malam
+              Momen Syukur &amp; Kebahagiaan Ananda Rafi
             </p>
           </motion.div>
 

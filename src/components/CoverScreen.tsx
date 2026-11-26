@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { Mail } from 'lucide-react';
 import { COUPLE_INFO, WEDDING_IMAGES } from '../data/weddingData';
 import { SmartImage } from './SmartImage';
@@ -10,6 +10,8 @@ interface CoverScreenProps {
 }
 
 export function CoverScreen({ guestName, onOpen }: CoverScreenProps) {
+  const prefersReducedMotion = useReducedMotion();
+
   return (
     <motion.main
       initial={{ opacity: 0 }}
@@ -41,21 +43,40 @@ export function CoverScreen({ guestName, onOpen }: CoverScreenProps) {
 
       {/* Centered Editorial Frame */}
       <div className="relative z-10 w-full max-w-md mx-auto flex-1 flex flex-col items-center justify-between py-4">
-        {/* Top Oval Child Portrait */}
+        {/* Top Oval Child Portrait (Static Frame, Animated Character Inside) */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, y: 12 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.65, ease: [0.2, 0, 0, 1] }}
           className="pt-4 flex flex-col items-center"
         >
-          <div className="w-48 sm:w-52 aspect-[3/4] rounded-full overflow-hidden border border-[#E9E1DA]/50 bg-[#100E0A] shadow-2xl">
-            <SmartImage
-              src={WEDDING_IMAGES.coverBoy}
-              alt="Ilustrasi kartun Ananda Muhammad Rafi Pratama dalam busana koko hitam emas dan peci"
-              loading="eager"
-              fallbackLabel="Ananda Rafi"
-              className="w-full h-full object-cover object-top"
-            />
+          <div className="relative w-48 sm:w-52 aspect-[3/4] rounded-full overflow-hidden border border-[#E9E1DA]/55 bg-[#100E0A] shadow-2xl">
+            <motion.div
+              animate={
+                prefersReducedMotion
+                  ? undefined
+                  : {
+                      scale: [1.08, 1.13, 1.08],
+                      y: [3, -5, 3],
+                      x: [-2.5, 2.5, -2.5],
+                      rotate: [-1.8, 1.8, -1.8],
+                    }
+              }
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                ease: 'easeInOut',
+              }}
+              className="w-full h-full origin-center"
+            >
+              <SmartImage
+                src={WEDDING_IMAGES.coverBoy}
+                alt="Ilustrasi kartun Ananda Muhammad Rafi Pratama dalam busana koko hitam emas dan peci"
+                loading="eager"
+                fallbackLabel="Ananda Rafi"
+                className="w-full h-full object-cover object-top"
+              />
+            </motion.div>
           </div>
         </motion.div>
 
