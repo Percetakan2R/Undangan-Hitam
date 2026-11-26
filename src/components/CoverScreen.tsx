@@ -68,23 +68,23 @@ export function CoverScreen({ guestName, onOpen }: CoverScreenProps) {
               className="absolute inset-0 w-full h-full object-cover object-top pointer-events-none select-none"
             />
 
-            {/* Character Layer 2: Upper Torso + Head hierarchy pivoting at waist */}
+            {/* Character Layer 2: Upper Torso + Head hierarchy pivoting at waist overlap */}
             <motion.div
               animate={
                 prefersReducedMotion
                   ? undefined
                   : {
-                      rotate: [-1.5, 2, -1.5],
-                      y: [0, -3.5, 0],
-                      scaleY: [1, 1.018, 1],
+                      rotate: [-1.2, 1.2, -1.2],
+                      y: [0, 1.2, 0],
+                      scaleY: [1, 1.012, 1],
                     }
               }
               transition={{
-                duration: 3.6,
+                duration: 3.8,
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              style={{ transformOrigin: '50.8% 68%' }}
+              style={{ transformOrigin: '50.8% 66.5%' }}
               className="absolute inset-0 w-full h-full pointer-events-none select-none"
             >
               <img
@@ -93,14 +93,14 @@ export function CoverScreen({ guestName, onOpen }: CoverScreenProps) {
                 className="absolute inset-0 w-full h-full object-cover object-top"
               />
 
-              {/* Character Layer 3: Head + Peci pivoting at neck with natural eye blink */}
+              {/* Character Layer 3: Head + Peci pivoting at neck base with natural eye blink */}
               <motion.div
                 animate={
                   prefersReducedMotion
                     ? undefined
                     : {
-                        rotate: [-4, 4.5, -4],
-                        y: [0, -2.5, 0],
+                        rotate: [-2.8, 2.8, -2.8],
+                        y: [0, 1.2, 0],
                       }
                 }
                 transition={{
@@ -108,7 +108,7 @@ export function CoverScreen({ guestName, onOpen }: CoverScreenProps) {
                   repeat: Infinity,
                   ease: 'easeInOut',
                 }}
-                style={{ transformOrigin: '50.8% 37.2%' }}
+                style={{ transformOrigin: '50.8% 36.8%' }}
                 className="absolute inset-0 w-full h-full"
               >
                 <img
